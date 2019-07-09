@@ -1,0 +1,26 @@
+<table>
+  <tr *ngFor="let cours of dataArr | async" id={{cours.id}}>
+    <div *ngIf="cours.name === 'Kiril Kozhevnikov'">
+      <td>
+        Name:
+      </td>
+      <td>
+        {{cours.name}}
+      </td>
+      <td>
+        Position:
+      </td>
+      <td>
+        {{cours.position}}
+      </td>
+      <td>
+        TZ:
+      </td>
+      <td>
+        {{cours.tz}}
+        {{cours.date | date}}
+        <button class="btn-done" (click)="delete(cours.id)">Done</button>
+      </td>
+    </div>
+  </tr>
+</table>

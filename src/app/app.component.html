@@ -1,0 +1,10 @@
+<div class="links-flex">
+  <a href="" [routerLink]="['/Pavlo']" routerLinkActive="router-link-active" >Pavlo</a>
+  <a href="" [routerLink]="['/Kiril']" routerLinkActive="router-link-active" >Kiril</a>
+  <a href="" [routerLink]="['/Evgeniy']" routerLinkActive="router-link-active" >Evgeniy</a>
+</div>
+<router-outlet></router-outlet>
+<input type="text" name="dataToName" id={{dataTo.name}} [(ngModel)]="dataTo.name" placeholder="Full Name" />
+<input type="text" name="dataToPosition" id={{dataTo.position}} [(ngModel)]="dataTo.position" placeholder="Position" />
+<textarea name="dataToTz" cols="30" rows="10" [(ngModel)]="dataTo.tz" placeholder="TZ"></textarea>
+<button (click)="addData()">Add</button>
